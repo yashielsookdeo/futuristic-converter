@@ -1,0 +1,19 @@
+/* src/components/DownloadButton.css */
+.download-button {
+    padding: 0.9rem 2rem;
+    background: linear-gradient(45deg, var(--color-neon-pink), #ff87ab); /* Gradient effect */
+    color: var(--color-black);
+    font-weight: bold;
+    border: none; /* Remove default border */
+    box-shadow: 0 0 10px var(--color-neon-pink-glow);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition-fast);
+    min-width: 250px; /* Make button wider */
+}
+
+/* No specific hover needed as framer-motion handles it, but you could add fallback */
+.download-button:hover {
+    /* Optional: Slight brightness increase or effect */
+    filter: brightness(1.1);
+}

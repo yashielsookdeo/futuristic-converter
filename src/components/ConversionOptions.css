@@ -1,0 +1,30 @@
+/* src/components/ConversionOptions.css */
+.conversion-options {
+    display: flex;
+    flex-direction: column; /* Stack label and select */
+    align-items: center; /* Center items horizontally */
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 350px; /* Limit width */
+}
+
+.options-label {
+    font-size: 1rem;
+    color: var(--color-light-gray);
+    font-family: var(--font-primary); /* Use primary font for label */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.format-select {
+    width: 100%;
+    text-align: center; /* Center the text inside select */
+    font-size: 1rem;
+    background-color: var(--color-dark-gray); /* Darker background for select */
+    border: 1px solid var(--color-light-gray);
+}
+
+.format-select option {
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+}

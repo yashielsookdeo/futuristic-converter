@@ -1,0 +1,127 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-dark-gray: #494949;
+  --color-light-gray: #7c7a7a;
+  --color-neon-pink: #ff5d73;
+  --color-neon-pink-glow: rgba(255, 93, 115, 0.7);
+  --color-error: #ff4d4d;
+
+  --font-primary: 'Orbitron', sans-serif; /* Futuristic font */
+  --font-secondary: 'Roboto', sans-serif; /* Readable font */
+
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-medium: all 0.4s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-primary);
+  color: var(--color-neon-pink);
+  text-shadow: 0 0 5px var(--color-neon-pink-glow);
+  margin-bottom: 1rem;
+}
+
+button, select, input {
+  font-family: var(--font-secondary);
+  border-radius: 0; /* Sharp edges */
+  border: 1px solid var(--color-dark-gray);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0.8rem 1.5rem;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+button:hover:not(:disabled), select:hover {
+  border-color: var(--color-neon-pink);
+  box-shadow: 0 0 8px var(--color-neon-pink-glow);
+  color: var(--color-neon-pink);
+}
+
+button:disabled {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-gray);
+  cursor: not-allowed;
+  border-color: var(--color-dark-gray);
+}
+
+select {
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%237c7a7a'%3E%3Cpath d='M6 9l-6-6h12z'/%3E%3C/svg%3E"); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem; /* Space for the arrow */
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--color-neon-pink);
+  box-shadow: 0 0 8px var(--color-neon-pink-glow);
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  button, select {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Utility classes */
+.error-message {
+  color: var(--color-error);
+  background-color: rgba(255, 77, 77, 0.1);
+  border: 1px solid var(--color-error);
+  padding: 0.8rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

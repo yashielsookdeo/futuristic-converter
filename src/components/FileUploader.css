@@ -1,0 +1,59 @@
+/* src/components/FileUploader.css */
+.file-uploader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    width: 100%;
+    max-width: 500px;
+    min-height: 250px;
+    border: 2px dashed var(--color-dark-gray);
+    background-color: rgba(73, 73, 73, 0.1); /* Subtle background */
+    color: var(--color-light-gray);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-medium); /* Smooth transitions for border/bg */
+    outline: none; /* Remove focus outline, handled by border style */
+    position: relative; /* For potential pseudo-elements */
+}
+
+.file-uploader:focus-visible { /* Style for keyboard focus */
+    border-color: var(--color-neon-pink);
+    box-shadow: 0 0 8px var(--color-neon-pink-glow);
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    fill: var(--color-light-gray);
+    transition: var(--transition-fast);
+}
+
+.file-uploader:hover .upload-icon {
+    fill: var(--color-neon-pink);
+    filter: drop-shadow(0 0 5px var(--color-neon-pink-glow));
+}
+
+.upload-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.upload-subtext {
+    font-size: 0.9rem;
+}
+
+.supported-formats {
+    font-size: 0.8rem;
+    color: var(--color-dark-gray);
+    margin-top: 1rem;
+}
